@@ -3,6 +3,8 @@
 Projeto realizado para o projeto de bolsas de estudos da Compass Uol.
 
 ## Requisitos AWS
+Clique [aqui](/AWS%20Resolução/aws-respostas.MD) para acessar a resolução.
+
 + Gerar uma chave pública para acesso ao ambiente;
 + Criar 1 instância EC2 com o sistema operacional Amazon Linux 2 (Família t3.small, 16 GB SSD);
 + Gerar 1 elastic IP e anexar à instância EC2;
