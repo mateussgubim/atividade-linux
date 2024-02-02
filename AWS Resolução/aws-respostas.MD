@@ -22,10 +22,10 @@ Uma chave pública é algo essencial para acessarmos remotamente nossa instânci
 > --output text > keyname.pem \
 > 
 > --query 'KeyMaterial'
+> 
+> chmod 400 keyname.pem 
 
-chmod 400 keyname.pem 
-
-![Criação da chave] (../atividades-prints/criando-chave.png)
+![Criação da chave] (/atividade-linux/atividade-prints/criando-chave.png)
 
 ## Criando o script para user data
 Esse script será utilizado na criação da instância. Seu objeto é realizar a atualização do sistema, instalar e executar o serviço do apache.
