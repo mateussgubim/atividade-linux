@@ -68,3 +68,6 @@ O Elastic IP é um endereço IPv4 fixo que podemos utilizar para conectar a uma 
 > ssh -i "local-da-chave" ec2-user@ec2-54-237-133-88.compute-1.amazonaws.com
 
 <img src="/atividade-prints/conectando-instancia.png" alt="Conectado à instância." />
+
+## Liberando as portas para acesso
+<img src="/atividade-prints/portas.png" alt="Liberando as portas de acesso." />
