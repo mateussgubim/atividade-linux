@@ -80,6 +80,8 @@ then
         echo "$STATUS | $HOUR - $DATE" >> /efs/mateus/serviceup.txt
 else
     	STATUS="$SERVICE ESTÁ INATIVO"
-        echo "$STATUS | $HOUR - $DATE" >> /ets/mateus/servicedown.txt
+        echo "$STATUS | $HOUR - $DATE" >> /efs/mateus/servicedown.txt
 fi
 ```
+`chmod +x check_apache.sh`
+<img src="/atividade-prints/apache_script_perm.png" alt="Permitindo a execução, executando e mostrando o resultado" />
