@@ -38,3 +38,16 @@ Isso permitirá que o EFS seja montado automaticamente ao iniciar o sistema.
 
 ## Criar um diretório dentro do FS com seu nome
 <img src="/atividade-prints/criand-diretorio.png" alt="Criando um diretório com o meu nome." />
+
+## Subir um apache no servidor - o apache deve estar online e rodando
+Como o apache foi instalado junto com a instância, basta apenas verificar se ele está executando normalmente, para isso usaremos o comando:
+> systemctl status httpd
+
+Como não veio um arquivo index.html no diretório do apache, criaremos um, adicionaremos o boilerplate padrão e uma mensagem informando que o serviço está ativo e funcionando:
+> nano /var/www/html/index.html
+
+<img src="/atividade-prints/create-index.png" alt="Criando o arquivo index.html." />
+
+Para comprovarmos que o apache está rodando, basta conectarmos ao Elastic IP da nossa instância.
+
+<img src="/atividade-prints/site-up.png" alt="Confirmando que o apache está funcionando" />
