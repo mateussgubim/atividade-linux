@@ -45,14 +45,14 @@ A sua criação pode ser realizada em qualquer diretório, pois iremos importá-
 
 
 ## Criando a instância
-> aws ec2 run-instance \
-> --image-id "id-da-imagem-da-instancia" \
-> --count 1 \
-> --instance-type "tipo-da-instancia" \
+> aws ec2 run-instances
+> --image-id "id-da-imagem-da-instancia" 
+> --count 1 
+> --instance-type "tipo-da-instancia" 
 > --key-name nome-da-chave
-> --security-group-ids "id-do-security-group" \
-> --subnet-id "id-subnet" \
-> --tag-specification 'ResourceType=instance,Tags=[{Key=Name,Value=value}] \
+> --security-group-ids "id-do-security-group" 
+> --subnet-id "id-subnet" 
+> --tag-specification 'ResourceType=instance,Tags=[{Key=Name,Value=value}] 
 
 <img src="/atividade-prints/criando-instancia.png" alt="Criando a instância." />
 
