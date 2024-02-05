@@ -21,3 +21,6 @@ O comando abaixo retornará os IDs dos EFSs ativos
 > aws efs create-mount-target --file-system-id fsID --subnet-id ID --security-groups ID
 
 <img src="/atividade-prints/criando-target-efs.png" alt="Anexando o NFS à instância." />
+
+## Criar um diretório dentro do FS com seu nome
+<img src="/atividade-prints/criand-diretorio.png" alt="Criando um diretório com o meu nome." />
