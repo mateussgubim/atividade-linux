@@ -41,7 +41,7 @@ A sua criação pode ser realizada em qualquer diretório, pois iremos importá-
 > 
 > hkconfig httpd on
 
-<img src="/atividade-prints/criando-script.png" alt="Criando o script." />
+<img src="/atividade-prints/criando-script2.png" alt="Criando o script." />
 
 
 ## Criando a instância
