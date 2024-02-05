@@ -51,3 +51,34 @@ Como não veio um arquivo index.html no diretório do apache, criaremos um, adic
 Para comprovarmos que o apache está rodando, basta conectarmos ao Elastic IP da nossa instância.
 
 <img src="/atividade-prints/site-up.png" alt="Confirmando que o apache está funcionando" />
+
+## Criando um script para verificar se o serviço está ativo
+O script tem uma função muito simple, primeiro verificará se o serviço "httpd" está com o status "active"; independente do resultado, ele armazenará uma mensagem personalizada em um arquivo de log, sendo um arquivo para ativo e outro para inativo.
+
+Por uma questão de organização será criada uma pasta no diretório / para armazenar o script. O script será criado da seguinte maneira:
+
+`nano check_apache.sh`
+
+```
+#!/usr/bin/env bash
+
+# VERIFICA QUE O SERVIÇO HTTPD ESTÁ SENDO EXECUTADO, APÓS ISSO ENVIA O RESULTADO PARA UM ARQUIVO DE LOG.
+
+# DEFININDO VARIÁVEIS
+
+SERVICE="httpd"
+ISACTIVE=$(systemctl is-active $SERVICE)
+HOUR=$(date +"%H:%M:%S")
+DATE=$(date +"%d/%b/$Y")
+
+# VERIFICANDO SE O SERVIÇO ESTÁ ATIVO E ENVIANDO A SAÍDA PARA O ARQUIVO DE LOG
+
+if [ $ISACTIVE == "active" ]
+then
+    	STATUS="O httpd ESTÁ ATIVO"
+        echo "$STATUS | $HOUR - $DATE" >> /efs/mateus/serviceup.txt
+else
+    	STATUS="$SERVICE ESTÁ INATIVO"
+        echo "$STATUS | $HOUR - $DATE" >> /ets/mateus/servicedown.txt
+fi
+```
