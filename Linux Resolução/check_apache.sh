@@ -6,8 +6,8 @@
 
 SERVICE="httpd"
 ISACTIVE=$(systemctl is-active $SERVICE)
-HOUR=$(date +"%H:%M:%S")
-DATE=$(date +"%d/%b/$Y")
+HOUR=$(TZ="America/Sao_Paulo" date +"%H:%M:%S")
+DATE=$(date +"%d/%b/%Y")
 
 # VERIFICANDO SE O SERVIÇO ESTÁ ATIVO E ENVIANDO A SAÍDA PARA O ARQUIVO DE LOG
 
