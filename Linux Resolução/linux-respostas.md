@@ -83,5 +83,6 @@ else
         echo "$STATUS | $HOUR - $DATE" >> /efs/mateus/servicedown.txt
 fi
 ```
-`chmod +x check_apache.sh`
+Permitindo a execução do script: `chmod +x check_apache.sh`
+
 <img src="/atividade-prints/apache_script_perm.png" alt="Permitindo a execução, executando e mostrando o resultado" />
