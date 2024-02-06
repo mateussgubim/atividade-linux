@@ -77,12 +77,26 @@ DATE=$(date +"%d/%b/$Y")
 if [ $ISACTIVE == "active" ]
 then
     	STATUS="O httpd ESTÁ ATIVO"
-        echo "$STATUS | $HOUR - $DATE" >> /efs/mateus/serviceup.txt
+        echo "$STATUS | $HOUR - $DATE" > /efs/mateus/serviceup.txt
 else
     	STATUS="$SERVICE ESTÁ INATIVO"
-        echo "$STATUS | $HOUR - $DATE" >> /efs/mateus/servicedown.txt
+        echo "$STATUS | $HOUR - $DATE" > /efs/mateus/servicedown.txt
 fi
 ```
 Permitindo a execução do script: `chmod +x check_apache.sh`
 
 <img src="/atividade-prints/apache_script_perm.png" alt="Permitindo a execução, executando e mostrando o resultado" />
+
+## Execução automatiza do script a cada 5 min
+Para essa tarefa, será utilizado um agendador de tarefas chamado cron. 
+
+O crontab possui seis colunas, que correspondem aos minutos, horas, dias, meses, semanas e, no final, os comandos que serão executados.
+
+As tabelas de um usuário ficam armazenadas no diretório `/var/spool/cron/crontab`, e os agendamentos globais ficam armazenados no arquivo `/etc/crontab`.
+
+O comando abaixo será executado com o usuário root, esse comando fará com que o script seja executado a cada cinco minutos.
+
+```
+crontab -e
+*/5 * * * * /scripts/check_apache.sh
+```
