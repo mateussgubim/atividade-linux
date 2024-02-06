@@ -14,8 +14,8 @@ DATE=$(date +"%d/%b/%Y")
 if [ $ISACTIVE == "active" ]
 then
     	STATUS="O httpd ESTÁ ATIVO"
-        echo "$STATUS | $HOUR - $DATE" >> /efs/mateus/serviceup.txt
+        echo "$STATUS | $HOUR - $DATE" > /efs/mateus/serviceup.txt
 else
     	STATUS="$SERVICE ESTÁ INATIVO"
-        echo "$STATUS | $HOUR - $DATE" >> /efs/mateus/servicedown.txt
+        echo "$STATUS | $HOUR - $DATE" > /efs/mateus/servicedown.txt
 fi
