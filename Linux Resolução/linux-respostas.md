@@ -87,7 +87,7 @@ Permitindo a execução do script: `chmod +x check_apache.sh`
 
 <img src="/atividade-prints/apache_script_perm.png" alt="Permitindo a execução, executando e mostrando o resultado" />
 
-## Execução automatiza do script a cada 5 min
+## Execução automatizada do script a cada 5 min
 Para essa tarefa, será utilizado um agendador de tarefas chamado cron. 
 
 O crontab possui seis colunas, que correspondem aos minutos, horas, dias, meses, semanas e, no final, os comandos que serão executados.
