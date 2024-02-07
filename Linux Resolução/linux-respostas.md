@@ -45,7 +45,7 @@ Como o apache foi instalado junto com a instância, basta apenas verificar se el
 `systemctl status httpd`
 
 Como não veio um arquivo index.html no diretório do apache, criaremos um, adicionaremos o boilerplate padrão e uma mensagem informando que o serviço está ativo e funcionando:
-`nano /va/www/html/index.html`
+`nano /var/www/html/index.html`
 
 <img src="/atividade-prints/create-index.png" alt="Criando o arquivo index.html." />
 
@@ -56,7 +56,7 @@ Para comprovarmos que o apache está rodando, basta conectarmos ao Elastic IP da
 ## Criando um script para verificar se o serviço está ativo
 O script tem uma função muito simple, primeiro verificará se o serviço "httpd" está com o status "active"; independente do resultado, ele armazenará uma mensagem personalizada em um arquivo de log, sendo um arquivo para ativo e outro para inativo.
 
-Por uma questão de organização será criada uma pasta no diretório / para armazenar o script. O script será criado da seguinte maneira:
+Por uma questão de organização será criada uma pasta no diretório `/` para armazenar o script. O script será criado da seguinte maneira:
 
 `nano check_apache.sh`
 
