@@ -50,7 +50,9 @@ aws ec2 run-instances \
 --key-name nome-da-chave \
 --security-group-ids "id-do-security-group" \
 --subnet-id "id-subnet" \
---tag-specification 'ResourceType=instance,Tags=[{Key=Name,Value=value}]
+--tag-specification 'ResourceType=instance,Tags=[{Key=Name,Value=value}] \
+--block-device-mappings '[{"DeviceName":"/dev/xvda","Ebs":{"VolumeSize":16,"VolumeType":"gp2"}}]' \
+--user-data file://~/script.txt
 ``` 
 
 <img src="/atividade-prints/criando-instancia.png" alt="Criando a instância." />
